@@ -1,0 +1,50 @@
+{
+   "ActiveEmotionalView":"No Loops",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-331,-428",
+   "DisplayTieOff":"1",
+   "ExpandedHierarchyInLayout":"",
+   "No Loops_ExpandedHierarchyInLayout":"",
+   "No Loops_Layout":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port SYSCLK2 -pg 1 -lvl 0 -x 0 -y 320 -defaultsOSRD
+preplace port PCIE_REFCLK0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port pcie_mgt_0 -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD -left
+preplace port pcie_mgt_1 -pg 1 -lvl 0 -x 0 -y 210 -defaultsOSRD -left
+preplace port PCIE_REFCLK1 -pg 1 -lvl 0 -x 0 -y 190 -defaultsOSRD
+preplace port port-id_QSFP28_0_ACTIVITY_LED -pg 1 -lvl 2 -x 360 -y 340 -defaultsOSRD
+preplace port port-id_HBM_CATTRIP_LS -pg 1 -lvl 2 -x 360 -y 320 -defaultsOSRD
+preplace port port-id_PCIE_PERST_LS_65 -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace inst blinker -pg 1 -lvl 1 -x 180 -y 320 -defaultsOSRD -pinDir SYSCLK2 left -pinY SYSCLK2 0L -pinDir HBM_CATTRIP_LS right -pinY HBM_CATTRIP_LS 0R -pinDir QSFP28_0_ACTIVITY_LED right -pinY QSFP28_0_ACTIVITY_LED 20R
+preplace inst channel_0 -pg 1 -lvl 1 -x 180 -y 60 -swap {5 1 2 3 4 0 6 7 8} -defaultsOSRD -pinDir pcie_mgt left -pinY pcie_mgt 20L -pinDir PCIE_REFCLK left -pinY PCIE_REFCLK 0L -pinDir PCIE_PERST_L left -pinY PCIE_PERST_L 40L
+preplace inst channel_1 -pg 1 -lvl 1 -x 180 -y 190 -swap {5 1 2 3 4 0 6 7 8} -defaultsOSRD -pinDir pcie_mgt left -pinY pcie_mgt 20L -pinDir PCIE_REFCLK left -pinY PCIE_REFCLK 0L -pinDir PCIE_PERST_L left -pinY PCIE_PERST_L 40L
+preplace netloc blinky_cattrip 1 1 1 N 320
+preplace netloc blinky_led 1 1 1 N 340
+preplace netloc sys_rst_n_0_1 1 0 1 20J 100n
+preplace netloc CLK_IN_D_0_1 1 0 1 N 60
+preplace netloc PCIE_REFCLK_0_1 1 0 1 N 190
+preplace netloc SYSCLK2_1 1 0 1 NJ 320
+preplace netloc channel_1_pcie_mgt_0 1 0 1 N 210
+preplace netloc xdma_0_pcie_mgt 1 0 1 N 80
+levelinfo -pg 1 0 180 360
+pagesize -pg 1 -db -bbox -sgen -190 0 590 390
+",
+   "No Loops_ScaleFactor":"0.971795",
+   "No Loops_TopLeft":"-420,1",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port SYSCLK2 -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port port-id_QSFP28_0_ACTIVITY_LED -pg 1 -lvl 4 -x 720 -y 80 -defaultsOSRD
+preplace port port-id_HBM_CATTRIP_LS -pg 1 -lvl 4 -x 720 -y 60 -defaultsOSRD
+preplace inst blinky -pg 1 -lvl 3 -x 600 -y 70 -defaultsOSRD
+preplace inst clock_buffer -pg 1 -lvl 2 -x 360 -y 70 -defaultsOSRD
+preplace inst system_ila -pg 1 -lvl 1 -x 120 -y -210 -defaultsOSRD
+preplace netloc blinky_cattrip 1 3 1 NJ 60
+preplace netloc blinky_led 1 3 1 NJ 80
+preplace netloc util_ds_buf_1_IBUF_OUT 1 2 1 NJ 70
+preplace netloc SYSCLK2_1 1 0 2 NJ 70 N
+levelinfo -pg 1 0 120 360 600 720
+pagesize -pg 1 -db -bbox -sgen -120 -290 950 270
+"
+}
+0
